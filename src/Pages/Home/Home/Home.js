@@ -1,9 +1,10 @@
 import React from "react";
+import ProductCards from "../../ProductCards/ProductCards";
 
 const Home = () => {
   return (
     <div>
-      <h1>This is Home Page</h1>
+      <ProductCards />
     </div>
   );
 };
