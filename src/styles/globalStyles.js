@@ -5,17 +5,25 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  }
+}
+:root{
+  --color-primary: #4b43e0;
+  --color-secondary:rgb(55, 65, 81);
+}
   html{
   scroll-behavior: smooth;
   /* font-size: 62.5%; */
   }
+body{
+  width: 100%;
+  height: 100%;
+}
   ul,li{
     list-style: none;
   }
   a{
     text-decoration: none;
+    color: var(--color-secondary);
   }
   /* img, svg{
     width: 100%;
@@ -32,7 +40,6 @@ export const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
 `;
-
 export const MainHeading = styled.h1`
   font-size: clamp(2.3rem, 6vw, 4.5rem);
   margin-bottom: 2rem;

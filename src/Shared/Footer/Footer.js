@@ -11,7 +11,6 @@ import {
   FooterColumn,
   FooterGrid,
 } from "../../styles/FooterStyles";
-
 import { Row, Section } from "../../styles/globalStyles";
 import { footerData, footerSocialData } from "./../../data/FooterData";
 const Footer = () => {
