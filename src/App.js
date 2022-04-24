@@ -1,8 +1,8 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
-import About from "./Pages/Home/About/About";
-import Contact from "./Pages/Home/Contact/Contact";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./Pages/Home/Home/Home";
+import Contact from "./Pages/Home/Contact/Contact";
+import About from "./Pages/Home/About/About";
+import Footer from "../src/Shared/Footer/Footer";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

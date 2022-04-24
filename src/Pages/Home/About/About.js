@@ -1,10 +1,14 @@
 import React from "react";
+import Navbar from "../../../Shared/Navbar/Navbar";
 
 const About = () => {
   return (
-    <div>
-      <h1>Here is our team members</h1>
-    </div>
+    <>
+      <Navbar />
+      <div>
+        <h1>Here is our team members</h1>
+      </div>
+    </>
   );
 };
 
