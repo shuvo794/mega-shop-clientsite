@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   FooterLinkItems,
   FooterLinkTitle,
@@ -10,22 +10,17 @@ import {
   FooterAddress,
   FooterColumn,
   FooterGrid,
-} from "./FooterStyles";
-// import { footerData, footerSocialData } from '../../../src/data/FooterData';
-import { Row, Section } from "../../globalStyles";
+} from "../../styles/FooterStyles";
+import { Row, Section } from "../../styles/globalStyles";
 import { footerData, footerSocialData } from "./../../data/FooterData";
 const Footer = () => {
   return (
-    <Section padding="4rem 0 2rem 0">
+    <Section padding="4rem 2 2rem 2">
       <FooterWrapper>
         <FooterGrid justify="space-between">
           <FooterColumn id="footerLogo">
-            <FooterLogo to="/">
-              {/* <SocialIcon src="./assets/logo.png" /> */}
-              Mega Shop
-            </FooterLogo>
+            <FooterLogo to="/">Mega Shop</FooterLogo>
             <FooterAddress></FooterAddress>
-
             <Row align="center" margin="auto  0 0 0" gap="1rem">
               {footerSocialData.map((social, index) => (
                 <FooterSocialIcon

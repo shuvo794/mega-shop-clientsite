@@ -1,12 +1,12 @@
 import React from "react";
-import styledComponents from "styled-components";
+import styled from "styled-components";
 import Product from "../Product/Product";
 import { productsData } from "../ProductsData/ProductsData";
 
-const Container = styledComponents.div`
-display:flex;
-flex-wrap:wrap;
-justify-content:space-between;
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
 const ProductCards = () => {
