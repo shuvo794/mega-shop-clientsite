@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { Column, Row } from "../../globalStyles";
+import { Column, Row } from "./globalStyles";
 
 export const FooterContainer = styled.div`
   background-color: #101522;
@@ -25,8 +25,6 @@ export const FooterSubscription = styled.section`
 `;
 
 export const FooterSubHeading = styled.p`
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   margin-bottom: 24px;
   font-size: 24px;
 `;
