@@ -2,24 +2,41 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const NavbarContainer = styled.div`
-  height: 90px;
+  width: 100%;
+  padding: 20px auto;
+  height: auto;
   display: flex;
   align-items: center;
-  width: 100%;
   position: relative;
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 export const Logo = styled.div`
   font-size: 30px;
   cursor: pointer;
   padding: auto;
+  align-self: flex-start;
 `;
 export const NavBarLinksContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+    height: auto;
+    margin-top: 20px;
+  }
 `;
-export const NavLinks = styled.ul``;
+export const NavLinks = styled.ul`
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+    width: 100%;
+  }
+`;
 export const NavBarLink = styled(NavLink)`
   padding: 8px 15px;
   border-radius: 5px;
@@ -35,6 +52,10 @@ export const NavBarLink = styled(NavLink)`
   }
   &:hover:before {
     width: 100%;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    text-align: center;
   }
 `;
 
@@ -72,8 +93,12 @@ export const ExploreNavLinks = styled.ul`
   height: 0;
   overflow: hidden;
   &.active {
-    width: auto;
-    height: auto;
+    width: 160px;
+    height: 230px;
+  }
+  @media only screen and (max-width: 900px) {
+    top: 295px;
+    right: 38%;
   }
 `;
 export const ExploreNavLink = styled(NavLink)`
