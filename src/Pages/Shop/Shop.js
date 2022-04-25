@@ -1,13 +1,11 @@
-import React from "react";
-import Navbar from "../../Shared/Navbar/Navbar";
+import React from 'react';
 
 const Shop = () => {
-  return (
-    <>
-      <Navbar />
-      <h1>this is teh shop component</h1>
-    </>
-  );
+    return (
+        <div>
+            
+        </div>
+    );
 };
 
 export default Shop;
