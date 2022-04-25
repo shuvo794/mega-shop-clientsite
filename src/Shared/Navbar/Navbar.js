@@ -9,28 +9,39 @@ import {
   Explore,
   Login,
   IconLink,
+  MenuToggle,
 } from "../../styles/Navbar.styles";
 import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
 import { ExploreNavLink } from "../../styles/Navbar.styles";
 import { ExploreNavLinks } from "../../styles/Navbar.styles";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isExploreOpen, setIsExploreOpen] = useState(false);
+  const [toggleOpen, setToggleOpen] = useState(false);
+  const location = useLocation();
   return (
     <div style={{ backgroundColor: "#f4fbfd", padding: "20px 0" }}>
       <Container>
-        <NavbarContainer>
+        <NavbarContainer
+          className={`${toggleOpen ? "active" : ""}`}
+          homeHeight={`${
+            (location.pathname === "/home") | (location.pathname === "/")
+              ? "0px"
+              : "45px"
+          }`}
+        >
+          <MenuToggle
+            onClick={() => setToggleOpen(!toggleOpen)}
+            className={`${toggleOpen ? "active" : ""}`}
+          />
           <Logo>Logo</Logo>
           <NavBarLinksContainer>
-            <NavLinks>
-              <NavBarLink to="/home">Home</NavBarLink>
-              <NavBarLink to="/shop">Shop</NavBarLink>
-              <NavBarLink to="/about">About</NavBarLink>
-              <NavBarLink to="/contact">Contact</NavBarLink>
-              <NavBarLink to="/vendors">Vendors</NavBarLink>
-            </NavLinks>
             <Explore>
-              <div onClick={() => setIsExploreOpen(!isExploreOpen)}>
+              <div
+                className={`${isExploreOpen ? "active" : ""}`}
+                onClick={() => setIsExploreOpen(!isExploreOpen)}
+              >
                 <p>Explore </p>
                 <IoIosArrowDown />
               </div>
@@ -42,6 +53,22 @@ const Navbar = () => {
                 <ExploreNavLink to="/home">Unit Testing</ExploreNavLink>
               </ExploreNavLinks>
             </Explore>
+            <NavLinks>
+              <NavBarLink
+                to="/home"
+                display={`${
+                  (location.pathname === "/home") |
+                    (location.pathname === "/") && "none"
+                }`}
+              >
+                Home
+              </NavBarLink>
+              <NavBarLink to="/shop">Shop</NavBarLink>
+              <NavBarLink to="/about">About</NavBarLink>
+              <NavBarLink to="/contact">Contact</NavBarLink>
+              <NavBarLink to="/vendors">Vendors</NavBarLink>
+            </NavLinks>
+
             <Login>
               <NavBarLink to="/login">Login</NavBarLink>
               <IconLink to="/search">
